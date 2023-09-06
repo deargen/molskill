@@ -1,6 +1,10 @@
 import argparse
-
+import sys
+from pathlib import Path
 import pandas as pd
+
+MODULE_DIR = str(Path(__file__).parent.absolute())
+sys.path.append(MODULE_DIR)
 
 from molskill.data.featurizers import AVAILABLE_FEATURIZERS, get_featurizer
 from molskill.helpers.cleaners import ensure_readability_and_remove
